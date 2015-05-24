@@ -27,14 +27,30 @@
                         <li class="sidebar-search">
                         </li>
                         <li>
-                            <a href="type1.php"><i class="fa fa-laptop"></i> Технологии</a>
+                            <a href="./pagetypes.php?type=1"><i class="fa fa-laptop"></i> Технологии</a>
                         </li>
                         <li>
-                            <a href="type2.php"><i class="fa  fa-bank"></i> Недвижимость</a>
+                            <a href="./pagetypes.php?type=2"><i class="fa  fa-bank"></i> Недвижимость</a>
                         </li>
                         <li>
-                            <a href="type3.php"><i class="fa fa-user"></i> Люди</a>
+                            <a href="./pagetypes.php?type=3"><i class="fa fa-user"></i> Люди</a>
                         </li>
+                        {if $is_admin=="1"}
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Админ панель<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="admin/add_news.php">Добавить новость</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin/edit_news.php">Редактировать новость</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin/delete_news.php">Удалить новость</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        {/if}
                         <!-----------------------------add button? -->
                     </ul>
                 </div>

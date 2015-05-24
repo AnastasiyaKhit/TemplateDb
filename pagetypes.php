@@ -5,28 +5,10 @@
     $smarty = new Smarty();
     $title = "News 1.0";
 
-    session_start();
-    if($_SESSION['login'] AND $_SESSION['password'])
-    {
-        $login = $_SESSION['login'];
-        $pass = $_SESSION['password'];
-        $q_a = mysql_query("SELECT is_admin FROM users WHERE login='$login' AND  password='$pass' ",$db);
-        $r_a = mysql_fetch_array($q_a);
-        if($r_a['is_admin']==1)
-        {
-            $is_admin="1";
-        }
-        
-        $user ="1";
-    }
 
-    $smarty->assign('is_admin',$is_admin);
-    $smarty->assign('user',$user);
     $smarty->assign('title',$title);
-
-
-    $q = mysql_query("SELECT * FROM articles",$db); 
-
+    $type=$_GET['type'];
+    $q = mysql_query("SELECT * FROM articles WHERE type='$type'",$db); 
 
     for($i=0;$i<mysql_num_rows($q);$i++)
     {
@@ -48,7 +30,6 @@
                 $res[$i]['type_image'] = "fa fa-user";
             }
 
-
             if(($i+1)%2==0)
             {
                 $res[$i]['position'] = "left";
@@ -63,6 +44,6 @@
     }
 
     $smarty->assign('res',$res);
-    $smarty->display('index.tpl');
+    $smarty->display('pagetypes.tpl');
 
 ?>
