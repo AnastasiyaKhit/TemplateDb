@@ -41,9 +41,11 @@
             {
                 $res[$i]['position'] = "right";
             }
+        
+            $res[$i]['link'] = "full.php?id=".$res[$i]['id'];
 
     }
-  
+
     $smarty->assign('res',$res);
     $smarty->display('index.tpl');
 

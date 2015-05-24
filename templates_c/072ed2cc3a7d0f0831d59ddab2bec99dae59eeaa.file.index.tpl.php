@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2015-05-24 23:24:34
+<?php /* Smarty version Smarty-3.1.21, created on 2015-05-24 23:57:20
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:95495561f1c171e0f5-59185165%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '072ed2cc3a7d0f0831d59ddab2bec99dae59eeaa' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1432495469,
+      1 => 1432497419,
       2 => 'file',
     ),
   ),
@@ -46,56 +46,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <body>
     <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</a>
-            </div>
-            <!-- /.navbar-header -->
+        
+        <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="action/exit.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                        </li>
-                        <li>
-                            <a href="type1.php"><i class="fa fa-laptop"></i> Технологии</a>
-                        </li>
-                        <li>
-                            <a href="type2.php"><i class="fa  fa-bank"></i> Недвижимость</a>
-                        </li>
-                        <li>
-                            <a href="type3.php"><i class="fa fa-user"></i> Люди</a>
-                        </li>
-                        <!-----------------------------add button? -->
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
 
         <div id="page-wrapper">
             <div class="panel panel-default">
@@ -104,8 +57,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
+                    
                     <ul class="timeline">
-<!-------------------------------------------------------------------------------------->   
+                        
                     <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['res']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value) {
@@ -125,7 +79,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
                                     </div>
                                     <div class="timeline-body">
                                         <p><?php echo $_smarty_tpl->tpl_vars['item']->value['summary'];?>
-<a href="full.php?id='.$res['id'].'">Подробнее...</a></p>
+<a href='<?php echo $_smarty_tpl->tpl_vars['item']->value['link'];?>
+'>Подробнее...</a></p>
                                     </div>
                                 </div>
                             </li>
@@ -144,22 +99,21 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации <?php echo $_smarty_tpl->tpl_vars['item']->value['date'];?>
 </small></p>
                                         <p><?php echo $_smarty_tpl->tpl_vars['item']->value['summary'];?>
-<a href="full.php?id='.$res['id'].'">Подробнее...</a></p>                       
+<a href='<?php echo $_smarty_tpl->tpl_vars['item']->value['link'];?>
+'>Подробнее...</a></p>                       
                                     </div>
                                 </div>
                             </li>
                         <?php }?>
                     <?php } ?>
-<!-------------------------------------------------------------------------------------->                  
+                        
                     </ul>
+                    
                 </div>
-                <!-- /.panel-body -->
             </div>
         </div>
-        <!-- /#page-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+
 
     <!-- jQuery -->
     <?php echo '<script'; ?>

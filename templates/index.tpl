@@ -18,55 +18,8 @@
 
 <body>
     <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">{$title}</a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="action/exit.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                        </li>
-                        <li>
-                            <a href="type1.php"><i class="fa fa-laptop"></i> Технологии</a>
-                        </li>
-                        <li>
-                            <a href="type2.php"><i class="fa  fa-bank"></i> Недвижимость</a>
-                        </li>
-                        <li>
-                            <a href="type3.php"><i class="fa fa-user"></i> Люди</a>
-                        </li>
-                        <!-----------------------------add button? -->
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
+        
+        {include file="header.tpl"}
 
         <div id="page-wrapper">
             <div class="panel panel-default">
@@ -75,6 +28,7 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
+                    
                     <ul class="timeline">
                         
                     {foreach $res as $item}
@@ -87,7 +41,7 @@
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации {$item.date}</small></p>
                                     </div>
                                     <div class="timeline-body">
-                                        <p>{$item.summary}<a href="full.php?id='.$res['id'].'">Подробнее...</a></p>
+                                        <p>{$item.summary}<a href='{$item.link}'>Подробнее...</a></p>
                                     </div>
                                 </div>
                             </li>
@@ -101,7 +55,7 @@
                                 </div>
                                     <div class="timeline-body">
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации {$item.date}</small></p>
-                                        <p>{$item.summary}<a href="full.php?id='.$res['id'].'">Подробнее...</a></p>                       
+                                        <p>{$item.summary}<a href='{$item.link}'>Подробнее...</a></p>                       
                                     </div>
                                 </div>
                             </li>
@@ -109,14 +63,12 @@
                     {/foreach}
                         
                     </ul>
+                    
                 </div>
-                <!-- /.panel-body -->
             </div>
         </div>
-        <!-- /#page-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
