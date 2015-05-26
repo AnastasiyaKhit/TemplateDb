@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2015-05-25 01:35:41
+<?php /* Smarty version Smarty-3.1.21, created on 2015-05-26 00:57:02
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:95495561f1c171e0f5-59185165%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '072ed2cc3a7d0f0831d59ddab2bec99dae59eeaa' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1432503337,
+      1 => 1432587243,
       2 => 'file',
     ),
   ),
@@ -42,17 +42,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link href="./bower_components/morrisjs/morris.css" rel="stylesheet">
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
     
-    <?php if ($_smarty_tpl->tpl_vars['user']->value=="0") {?>
+    <?php if ($_smarty_tpl->tpl_vars['user']->value=="1") {?>
         <?php echo $_smarty_tpl->getSubTemplate ("context.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     <?php } else { ?>
         <?php echo $_smarty_tpl->getSubTemplate ("login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     <?php }?>
-
 
     <!-- jQuery -->
     <?php echo '<script'; ?>
@@ -84,8 +82,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <?php echo '<script'; ?>
  src="./dist/js/sb-admin-2.js"><?php echo '</script'; ?>
 >
-
 </body>
-
 </html>
 <?php }} ?>

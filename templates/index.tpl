@@ -15,7 +15,6 @@
     <link href="./bower_components/morrisjs/morris.css" rel="stylesheet">
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
     
     {if $user=="1"}
@@ -40,7 +39,5 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
-
 </body>
-
 </html>

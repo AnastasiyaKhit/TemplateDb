@@ -15,7 +15,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="action/exit.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="./action/exit.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -40,13 +40,13 @@
                                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Админ панель<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="admin/add_news.php">Добавить новость</a>
+                                        <a href="./ref.php?type_page=add">Добавить новость</a>
                                     </li>
                                     <li>
-                                        <a href="admin/edit_news.php">Редактировать новость</a>
+                                        <a href="./ref.php?type_page=up">Редактировать новость</a>
                                     </li>
                                     <li>
-                                        <a href="admin/delete_news.php">Удалить новость</a>
+                                        <a href="./ref.php?type_page=del">Удалить новость</a>
                                     </li>
                                 </ul>
                             </li>

@@ -18,7 +18,7 @@
                                 <div class='{$item.class_type}' ><i class='{$item.type_image}'></i></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">{$item.title}</h4>
+                                        <a style="text-decoration:none; color:#000;" href="full.php?id={$item.id}"><h4 class="timeline-title">{$item.title}</h4></a>
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации {$item.date}</small></p>
                                     </div>
                                     <div class="timeline-body">
@@ -32,7 +32,7 @@
                                 <div class='{$item.class_type}'><i class='{$item.type_image}'></i></div>
                                 <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="timeline-title">{$item.title}</h4>
+                                    <a style="text-decoration:none; color:#000;" href="full.php?id={$item.id}"><h4 class="timeline-title">{$item.title}</h4></a>
                                 </div>
                                     <div class="timeline-body">
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации {$item.date}</small></p>

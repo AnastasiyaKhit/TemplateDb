@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2015-05-25 01:35:27
+<?php /* Smarty version Smarty-3.1.21, created on 2015-05-26 01:53:07
          compiled from ".\templates\context.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:236645562441fb213d1-73266221%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2ca0bf9801aacbdb7aef2632a2eacd04dc182d41' => 
     array (
       0 => '.\\templates\\context.tpl',
-      1 => 1432502734,
+      1 => 1432590783,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_5562441fbc5c39_02405659',
   'variables' => 
   array (
     'res' => 0,
     'item' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_5562441fbc5c39_02405659',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5562441fbc5c39_02405659')) {function content_5562441fbc5c39_02405659($_smarty_tpl) {?>    <div id="wrapper">
         
@@ -51,8 +51,9 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 '></i></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title"><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
-</h4>
+                                        <a style="text-decoration:none; color:#000;" href="full.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"><h4 class="timeline-title"><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
+</h4></a>
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации <?php echo $_smarty_tpl->tpl_vars['item']->value['date'];?>
 </small></p>
                                     </div>
@@ -71,8 +72,9 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 '></i></div>
                                 <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="timeline-title"><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
-</h4>
+                                    <a style="text-decoration:none; color:#000;" href="full.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"><h4 class="timeline-title"><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
+</h4></a>
                                 </div>
                                     <div class="timeline-body">
                                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> Дата публикации <?php echo $_smarty_tpl->tpl_vars['item']->value['date'];?>

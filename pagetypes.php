@@ -5,6 +5,22 @@
     $smarty = new Smarty();
     $title = "News 1.0";
 
+    session_start();
+    if($_SESSION['login'] AND $_SESSION['password'])
+    {
+        $login = $_SESSION['login'];
+        $pass = $_SESSION['password'];
+        $q_a = mysql_query("SELECT is_admin FROM users WHERE login='$login' AND  password='$pass' ",$db);
+        $r_a = mysql_fetch_array($q_a);
+        if($r_a['is_admin']==1)
+        {
+            $is_admin="1";
+        }
+        
+        $user ="1";
+    }
+
+    $smarty->assign('is_admin',$is_admin);
 
     $smarty->assign('title',$title);
     $type=$_GET['type'];

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2015-05-25 01:35:41
+<?php /* Smarty version Smarty-3.1.21, created on 2015-05-26 00:12:17
          compiled from ".\templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:295615562442db59522-66058766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8c1ab4a7e145d0e958eaddedf35e5478099dd1b8' => 
     array (
       0 => '.\\templates\\login.tpl',
-      1 => 1432502480,
+      1 => 1432584201,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
   'unifunc' => 'content_5562442db63c36_18719690',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5562442db63c36_18719690')) {function content_5562442db63c36_18719690($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="ru">
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body>
     <div class="container">
-        <a href="?page=reg">Регистрация</a>
+        <a href="./ref.php?type_page=reg">Регистрация</a>
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
